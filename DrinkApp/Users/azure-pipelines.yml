@@ -4,9 +4,9 @@
 # https://aka.ms/yaml
 
 trigger:
-- merge-usersDrinks
+- main
 pr:
-- merge-usersDrinks
+- main
 
 pool:
   vmImage: windows-2022
