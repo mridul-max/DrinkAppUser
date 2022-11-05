@@ -1,0 +1,51 @@
+﻿# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- merge-usersDrinks
+pr:
+- merge-usersDrinks
+
+pool:
+  vmImage: windows-2022
+
+steps:
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--output {Build.BinariesDirectory} --configuration Release'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+# Visual Studio Test
+# Run unit and functional tests (Selenium, Appium, Coded UI test, etc.) using the Visual Studio Test (VsTest) runner. Test frameworks that have a Visual Studio test adapter such as MsTest, xUnit, NUnit, Chutzpah (for JavaScript tests using QUnit, Mocha and Jasmine), etc. can be run. Tests can be distributed on multiple agents using this task (version 2).
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies' # Options: testAssemblies, testPlan, testRun
+    testAssemblyVer2: | # Required when testSelector == TestAssemblies
+      **\*test.dll
+      !**\*TestAdapter.dll
+      !**\obj\** 
+      !**\bin\**\ref\**
+    testPlan: # Required when testSelector == TestPlan
+    testSuite: # Required when testSelector == TestPlan
+    testConfiguration: # Required when testSelector == TestPlan
+    tcmTestRun: '$(test.RunId)' # Optional
+    searchFolder: '$(System.DefaultWorkingDirectory)' 
+

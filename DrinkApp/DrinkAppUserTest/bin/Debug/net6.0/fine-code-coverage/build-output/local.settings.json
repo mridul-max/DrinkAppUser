@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "dbkey": "VurQ3mo9pIIXeQGpydnQLdx6XEaUquKZyuSDlKFk2jCZT6Iud3QyVJUjE9xylUO2vSgvjPrw4nZecTOiZNgOPA==",
+    "DBURI": "https://group10cosmos.documents.azure.com:443/",
+    "DBName": "DrinkAppDB",
+    "SENDGRID_API_KEY": "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",
+    "SENDER_ADDRESS": "drinkomiring@gmail.com"
+  },
+  "JwtSettings": {
+    "Key": "devKey development",
+    "Issuer": "DrinkAppRecipes.azurewebsites.net",
+    "Audience": "DrinkAppUsers / Patients / Caregivers / Admins"
+  }
+}
