@@ -10823,11 +10823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\MyCloudFinalProject\\DrinkApp\\DrinkApp\\DrinkAppUserTest\\DrinkAppUserTest.csproj",
+      "projectUniqueName": "D:\\DrinkAppUser\\DrinkApp\\DrinkAppUserTest\\DrinkAppUserTest.csproj",
       "projectName": "DrinkAppUserTest",
-      "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\MyCloudFinalProject\\DrinkApp\\DrinkApp\\DrinkAppUserTest\\DrinkAppUserTest.csproj",
+      "projectPath": "D:\\DrinkAppUser\\DrinkApp\\DrinkAppUserTest\\DrinkAppUserTest.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\MyCloudFinalProject\\DrinkApp\\DrinkApp\\DrinkAppUserTest\\obj\\",
+      "outputPath": "D:\\DrinkAppUser\\DrinkApp\\DrinkAppUserTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10844,8 +10844,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\OneDrive\\Desktop\\MyCloudFinalProject\\DrinkApp\\DrinkApp\\Users\\Users.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\MyCloudFinalProject\\DrinkApp\\DrinkApp\\Users\\Users.csproj"
+            "D:\\DrinkAppUser\\DrinkApp\\Users\\Users.csproj": {
+              "projectPath": "D:\\DrinkAppUser\\DrinkApp\\Users\\Users.csproj"
             }
           }
         }
